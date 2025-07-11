@@ -1,0 +1,22 @@
+name: rag-pipeline
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+  - huggingface
+  - nvidia
+  
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly  # Remove or replace with cudatoolkit if using GPU
+  - faiss-cpu
+  - pip:
+      - transformers
+      - sentence-transformers
+      - pymupdf
+      - dspy-ai
+      - huggingface_hub 
