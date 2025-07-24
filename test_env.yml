@@ -1,6 +1,5 @@
-name: rag-pipeline-cpu
+name: rag-fix
 channels:
-  - defaults
   - conda-forge
   - pytorch
   - huggingface
@@ -9,13 +8,7 @@ dependencies:
   - python=3.9
   - pip
   - pytorch
-  - torchvision
-  - torchaudio
   - cpuonly
   - faiss-cpu
   - pip:
       - transformers
-      - sentence-transformers
-      - PyMuPDF
-      - dspy
-      - huggingface_hub

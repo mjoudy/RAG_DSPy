@@ -1,9 +1,10 @@
-name: rag-pipeline-cpu
+name: rag-pipeline-gpu
 channels:
   - defaults
   - conda-forge
   - pytorch
   - huggingface
+  - nvidia
 
 dependencies:
   - python=3.9
@@ -11,11 +12,11 @@ dependencies:
   - pytorch
   - torchvision
   - torchaudio
-  - cpuonly
-  - faiss-cpu
+  - pytorch-cuda=11.8  # Or 12.1 depending on the cluster CUDA version
+  - faiss-gpu
   - pip:
       - transformers
       - sentence-transformers
-      - PyMuPDF
-      - dspy
+      - pymupdf
+      - dspy-ai
       - huggingface_hub
